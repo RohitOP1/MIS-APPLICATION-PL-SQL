@@ -1,0 +1,38 @@
+--Inner Join — Get employee info with department name:
+--SELECT e.ID, e.AGE, e.GENDER, e.SALARY, d.DEPT_NAME
+--FROM EMPLOYEE_SALARY e
+--JOIN DEPARTMENT d ON e.ID = d.EMPLOYEE_ID;
+
+--select * from department;
+
+--Left Join — Get all employees and their department (if any):
+--SELECT e.ID, e.AGE, e.GENDER, e.SALARY, d.DEPT_NAME
+--FROM EMPLOYEE_SALARY e
+--LEFT JOIN DEPARTMENT d ON e.ID = d.EMPLOYEE_ID;
+
+-- Right Join — Get all departments and employee info (if any):
+--SELECT e.ID, e.AGE, e.GENDER, e.SALARY, d.DEPT_NAME
+--FROM EMPLOYEE_SALARY e
+--RIGHT JOIN DEPARTMENT d ON e.ID = d.EMPLOYEE_ID;
+
+--Full Outer Join — Get all employees and departments, matching where possible:
+--SELECT e.ID, e.AGE, e.GENDER, e.SALARY, d.DEPT_NAME
+--FROM EMPLOYEE_SALARY e
+--FULL OUTER JOIN DEPARTMENT d ON e.ID = d.EMPLOYEE_ID;
+
+--Join EMPLOYEE and DEPARTMENT
+--SELECT e.ID, e.GENDER, e.AGE, d.DEPT_NAME
+--FROM EMPLOYEE_SALARY e
+--JOIN DEPARTMENT d ON e.ID = d.EMPLOYEE_ID;
+
+--Join EMPLOYEE and ATTENDANCE
+--SELECT e.ID, e.GENDER, a.CHECK_IN, a.CHECK_OUT
+--FROM EMPLOYEE_SALARY e
+--JOIN ATTENDANCE a ON e.ID = a.EMPLOYEE_ID;
+
+-- Join EMPLOYEE → PAYROLL → PAYSLIP
+--SELECT e.ID, e.SALARY, p.BASIC_SALARY, p.BONUS, ps.NET_SALARY
+--FROM EMPLOYEE_SALARY e
+--JOIN PAYROLL p ON e.ID = p.EMPLOYEE_ID
+--JOIN PAYSLIP ps ON p.PAYROLL_ID = ps.PAYROLL_ID;
+
